@@ -1,0 +1,130 @@
+**call by reference
+#include<stdio.h>
+void swap(int *n1,int *n2)
+{
+	int temp;
+	temp=*n1;
+	*n1=*n2;
+	*n2=temp;
+}
+int main()
+{
+	int n1=50,n2=70;
+	clrscr();
+	swap (&n1,&n2);
+	printf("number1 %d", n1);
+	printf("\nnumber2 %d", n2);
+	getch();
+	return 0;
+}
+---------------------------------------
+**call by value
+#include<stdio.h>
+void swap(int n1,int n2)
+{
+	int temp;
+	temp=n1;
+	n1=n2;
+	n2=temp;
+}
+int main()
+{
+	int n1=50,n2=70;
+	clrscr();
+	swap (n1,n2);
+	printf("number1 %d", n1);
+	printf("\nnumber2 %d", n2);
+	getch();
+	return 0;
+}
+------------------------------------------
+**string functions
+#include<stdio.h>
+#include<string.h>
+void main()
+{
+	char s1[20]="StringFunctions";
+	char s2[20]="stringfunctions.com";
+	clrscr();
+	printf("Length of string s1 : %d",strlen(s1));
+	if(strcmp(s1,s2)==0)
+		printf("\nBoth the strings are equal");
+	else
+		printf("\nBoth the strings are not equal");
+	printf("\nOutput string after concatenation : %s", strcat(s1,s2));
+	strcpy(s1,s2);
+	printf("\n%s",s1);
+	printf("\nLowercase: %s",strlwr(s1));
+	printf("\nUppercase : %s", strupr(s2));
+	getch();
+}
+-----------------------------------------------
+**Different types of variables
+#include<stdio.h>
+#include<stdlib.h>
+#define x 	100
+int m=20; int n=30;
+int main()
+{
+	int a=40,b=60;
+	int const d=50;
+	clrscr();
+	printf("Values are : %d %d %d %d %d ",a,b,m,n,d);
+	printf("\n%d",x);
+	getch();
+	return 0;
+}
+-------------------------------------------------
+**static register
+#include <stdio.h>
+ static int g = 5;
+ void fn(){
+ 	static int i = 0;
+ 	printf("g = %d\t", g--);
+ 	printf("i = %d\n",i++);
+ }
+int main(){
+  while(g >= 0)
+  fn();	
+  return 0;
+}
+---------------------------------
+**auto register
+#include <stdio.h>
+
+int sum(int n1, int n2){
+  auto int s;       
+  s = n1+n2;
+  return s;
+}
+int main(){
+  int i = 2, j = 3, k;
+  k = sum(i, j);
+  printf("sum is : %d\n", k);
+  return 0;
+}
+----------------------------------
+**register
+#include <stdio.h>
+int main()
+{
+    register int n = 20;
+    int *ptr;
+    ptr = &n;
+    printf("address of n : %u", ptr);
+    return 0;
+}
+-----------------------------------------------
+**extern register
+#include <stdio.h>
+int g;
+void print(){
+  g = 10;
+  printf("g = %d\n", g);
+}
+int main(){
+  g = 7;
+  printf("g = %d\n", g);
+  print();
+  return 0;
+}
