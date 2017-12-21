@@ -1,0 +1,217 @@
+Addition of two 3*3 matrices
+#include<stdio.h>
+#include<math.h>
+int main() {
+    int a[3][3]={{1,0, 1},
+                 {0,0,1}, 
+                 {1,1,0}};
+    int b[3][3]={{1,1,1}, 
+                 {0,1,0}, 
+                 {1,0,0}};
+    int c[3][3],i,j;
+    printf("\nThe first matrix is\n");
+    for(i=0;i<3;i++){
+        printf("\n");
+        for(j=0;j<3;j++)
+            printf("%d\t",a[i][j]);
+    }
+    printf("\nThe second matrix is\n");
+    for(i=0;i<3;i++){
+        printf("\n");
+        for(j=0;j<3;j++)
+            printf("%d\t",b[i][j]);
+    }
+    for(i=0;i<3;i++)
+        for(j=0;j<3;j++)
+            c[i][j]=a[i][j]+b[i][j];
+    printf("\nThe addition of two matrices is\n");
+    for(i=0;i<3;i++){
+        printf("\n");
+        for(j=0;j<3;j++)
+            printf("%d\t",c[i][j]);
+    }
+    return 0;
+}
+---------------------------------------------------------------
+#include<stdio.h>
+//ADDITION OF 2 3D MATRICES
+int main()
+{
+int a[3][3][3]=
+{
+{
+{1,0,1},
+{1,1,1},
+{0,0,0}
+},
+{
+{0,0,1},
+{1,0,1},
+{0,1,1}
+},
+{
+{1,0,1},
+{1,1,1},
+{0,0,0}
+}
+};
+int b[3][3][3]=
+{
+{
+{1,0,1},
+{1,1,1},
+{0,0,0}
+},
+{
+{1,0,1},
+{1,1,1},
+{0,0,0}
+},
+{
+{0,0,1},
+{1,0,1},
+{0,1,1}
+}
+};
+int c[3][3][3];
+//ADDING THE TWO MATRICES
+for(int i=0 ; i<3 ; i++ )
+{
+for(int j=0 ; j<3 ; j++)
+{
+for(int k=0; k<3 ; k++)
+{
+c[i][j][k] = a[i][j][k] + b[i][j][k];
+}
+}
+}
+//
+printf("First matrix is:\n");
+for(int i=0 ; i<3 ; i++ )
+{
+for(int j=0 ; j<3 ; j++)
+{
+for(int k=0; k<3; k++)
+{
+printf("%d \t",a[i][j][k]);
+}
+printf("\n");
+}
+printf("\n");
+}
+//
+printf("Second Matrix is:\n");
+for(int i=0 ; i<3 ; i++ )
+{
+for(int j=0 ; j<3 ; j++)
+{
+for(int k=0; k<3; k++)
+{
+printf("%d \t",b[i][j][k]);
+}
+printf("\n");
+}
+printf("\n");
+}
+//
+printf("Addtion : Result matrix is: \n");
+for(int i=0 ; i<3 ; i++ )
+{
+for(int j=0 ; j<3 ; j++)
+{
+for(int k=0; k<3; k++)
+{
+printf("%d \t",c[i][j][k]);
+}
+printf("\n");
+}
+printf("\n");
+}
+}
+-----------------------------------------
+sorting an array
+#include<stdio.h>
+
+int main()
+{
+    char a[5]={'z', 44, 66, 'a', 192};
+    int i,j,temp,num;
+    for(i=0;i<5;i++)
+    {
+        for(j=i+1;j<5;j++)
+        {
+            if(a[i]>a[j])
+            {
+                temp=a[i];
+                a[i]=a[j];
+                a[j]=temp;
+            }
+        }
+    }
+    printf("The sorted elements are: ");
+    for(i=0;i<5;i++)
+        printf("%c\t",a[i]);
+    return 0;
+}
+--------------------------------------------
+swapping
+#include<stdio.h>
+#include<conio.h>
+int main()
+{
+	int a=10,b=20;
+	clrscr();
+	a=a+b-(b=a);
+	printf("%d\n", a);
+	printf("%d", b);
+	getch();
+	return 0;
+}
+------------------------------------------
+converting lowercase to uppdercase
+#include<stdio.h>
+int main()
+{
+    char i,j;
+    scanf("%c",&i);
+    if(i>=97 && i<=122)
+    {
+        j=i-32;
+        printf("%c",j);
+    }
+}
+-------------------------------------------
+break
+#include<stdio.h>
+int main()
+{
+    int i=1;
+    for(i=1;i<100;i++)
+    {
+        if(i%2!=0)
+        {
+            printf("%d\t",i);
+            
+        }
+        if(i==10)
+            break;
+    }
+}
+-------------------------------------------
+atoi function using strcpy 
+#include<stdio.h>
+#include<stdlib.h>
+#include<string.h>
+int main()
+{
+    int val;
+    char a[20];
+    strcpy(a,"9989");
+    val=atoi(a);
+    printf("string :%s \n value is :%d",a,val);
+    strcpy(a,"4564asdfa");
+    val=atoi(a);
+    printf("\nstring :%s \n value is :%d",a,val);
+    
+}
+
