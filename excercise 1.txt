@@ -1,0 +1,114 @@
+*displaying numbers from 10 to 1
+#include<stdio.h>
+
+void main(){
+    int x;
+    for (x=10;x>=0;x--)
+    {
+        printf("%d ", x);
+    }
+}
+------------------------------------------------
+*displaying characters from z to a 
+#include<stdio.h>
+
+void main(){
+    int x;
+    for (x=122;x>=97;x--)
+    {
+        printf("%c=%i ", x);
+    }
+}
+-------------------------------------------------*
+*display boolean values
+#include<stdio.h>
+#define true 1
+#define false 0
+void main()
+{
+   printf("the value is %d", true);
+   printf("the value is %d", false);
+}
+---------------------------------------------------
+*displaying first 10 natural numbers
+#include<stdio.h>
+
+int main(){
+    int x;
+    for (x=1;x<=10;x++)
+    {
+        printf(" %d ", x);
+    }
+}
+-------------------------------------------------
+sum of first 10 natural numbers
+#include<stdio.h>
+
+int main(){
+    int x;
+    int sum=0;
+    printf("The first 10 natural numbers: \n");
+    for (x=1;x<=10;x++)
+    {
+        sum=sum+x;
+        printf("%d ",x);
+    }
+        printf("\nThe sum is %d ", sum);
+    
+}
+------------------------------------------------
+sum and average of first 10 natural numbers
+#include <stdio.h>
+int main()
+{       
+    int i,n,sum=0;
+	float avg;
+	printf("Input the 10 numbers : \n");
+	for (i=1;i<=10;i++)
+	{
+        printf("Number-%d :%d\n",i,i);
+		scanf("%d",&n);
+		sum=sum+n;
+	}
+	avg=sum/10.0;
+	printf("The sum of 10 no is : %d\nThe Average is : %f\n",sum,avg);
+ 
+}
+------------------------------------------------
+display the cube of the number upto given an integer.
+#include <stdio.h>
+int main()
+{       
+    int i,n;
+
+	printf("Input number of terms : \n");
+	scanf("%d",&n);
+	for (i=1;i<=n;i++)
+			
+	printf("Number is : %d and cube of the %d is : %d \n",i,i,(i*i*i));
+}
+----------------------------------------------------
+pattern like right angle triangle with a number which will repeat a number in a row.
+#include <stdio.h>
+int main()
+{       
+    int i,n,r;
+	scanf("%d",&r);
+	printf("Input number of rows : %d\n",r);
+		for (i=1;i<=r;i++)
+		{
+		    for(n=1;n<=i;n++)
+		        printf("%d",i);
+		    printf("\n");
+		}
+}
+------------------------------------------------------
+C program to convert a string to a long integer. 
+#include<stdio.h>
+#include<stdlib.h>
+int main() {
+    char *string="87654321" , *endptr;
+    long lnumber;
+    lnumber=strtol(string,&endptr,10);
+    printf("in decimals : %d",lnumber);
+}
